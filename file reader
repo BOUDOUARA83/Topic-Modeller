@@ -1,0 +1,41 @@
+package assignment2;
+
+public class fileReader {
+	private static final String MyFile1 = null;
+	private static final String MyFile2 = null;
+
+	public fileReader(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args)
+	
+	{
+		
+		fileReader reader1 = new fileReader("MyFile1");
+		fileReader reader2 = new fileReader("MyFile2");
+	
+		
+		//by using the isEqual function, we can check if the topics 
+		//of file 1 and file2 are equal or not. we are going to use
+		//an if statement for this 
+		//if the two files has the same topics then it should print it has same topics
+		//otherwise print different topics.
+		boolean SameTopic =isEqual(MyFile1, MyFile2);
+		if (SameTopic)
+		{
+			System.out.println("The first file and the second file contain the same topic");
+			
+		}
+		else
+		{
+			System.out.println("The first file and the second file are different topics");
+		}
+		
+	}
+
+	private static boolean isEqual(String myfile12, String myfile22) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}
