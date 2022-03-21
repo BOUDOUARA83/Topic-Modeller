@@ -1,0 +1,126 @@
+/*
+Description : This is a Java Program that shows if a set of documents 
+are about the same topic or not.
+the program will scan the words of the documents and check if
+there are common words between the documents which should then 
+declare that these documents are similar.
+stop words for example like the , a , of , he etc should be excluded
+from the analysis.
+
+Name : Ethar Boudouara 
+Date : 21 March 2022
+*/
+
+
+
+package assignment2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+
+//  the Modeller class
+public class Modeller
+
+{
+	//initialising variables for the two files
+	String fileName1;
+	String fileName2;
+	File myFile1;
+	File myFile2;
+
+	
+	
+	//this initialises a true value 
+	boolean sameTopic = true;
+	
+	
+	public Modeller(String fileName)
+	{
+		this.fileName1 = fileName;
+		this.fileName2 = fileName;
+	}
+	
+	
+	//this is a method to open the first and the second file
+	
+	public void openFile()
+	{
+		File myFile1  =new File(fileName1);
+		File myFile2  =new File(fileName2);
+	}
+	
+	//this is a method to read the words of the first file
+	public String readWord()
+	{
+		return fileName1;
+		
+	}
+	
+	//this is a method to read the words of the second file
+	public String readWord1()
+	{
+		return fileName2;
+		
+	}
+	//A method to read the lines of the two files 
+	public String readlines()
+	{
+		String Line = "";
+		try 
+		{
+			// a function to scan file1 and prints it 
+			Scanner MySCanner = new Scanner(myFile1);
+			while (MySCanner.hasNextLine())
+			{
+				Line = MySCanner.nextLine();
+				System.out.println("the line is " + Line);
+			}
+		
+		
+		} 
+		//error checker 
+		catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+			System.out.println("error caught" +e.getMessage());
+		}
+		
+		//return the lines 
+		return Line;
+		
+	}
+	
+	
+	//a function to scan file2 and prints it 
+	public String readlines1()
+	{
+		String Line = "";
+		try
+		{
+			// a function to scan file1 and prints it 
+			Scanner MySCanner = new Scanner(myFile2);
+			while (MySCanner.hasNextLine())
+			{
+				Line = MySCanner.nextLine();
+				System.out.println("the line is " + Line);
+			}
+			
+	
+		} 
+		//error checker 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+			System.out.println("error caught" +e.getMessage());
+		}
+		
+		//return the lines 
+		return Line;
+		
+	}
+	
+		
+}
