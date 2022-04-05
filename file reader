@@ -1,24 +1,16 @@
 package assignment2;
 
-public class fileReader {
-	private static final String MyFile1 = null;
-	private static final String MyFile2 = null;
 
-	public fileReader(String string) {
-		// TODO Auto-generated constructor stub
-	}
 
-	public static void main(String[] args)
+public class fileReader 
+{
 	
+	public static void main(String []args)
 	{
 		
-		fileReader reader1 = new fileReader("MyFile1");
-		fileReader reader2 = new fileReader("MyFile2");
-	
-		
-
-	private static boolean isEqual(String myfile12, String myfile22) {
-		// TODO Auto-generated method stub
-		return false;
+		Modeller GUI= new Modeller ("topic Modeller");		
+			
 	}
 }
+
+
