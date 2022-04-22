@@ -17,5 +17,24 @@ this is where object of the files should be created to call the two files
 by using the isEqual function, we can check if the topics of file 1 and file2 are equal or not. we are going to use an if statement for this. if the two files has the same topics then it should print it has same topicsotherwise it should print different topics.
 
 
+GUI Class
+A graphic user interface is built in the GUI class. 
+There should a button that user can click on to get to choose thier files from the file chooser window.
+this is done by creating the file chooser functyion in the file chooser class i have created then i linked it the GUI in the control class.
 
+the Gui class extends from the JFrame function which which inherits the java.awt.Frame class. JFrame works like the main window where components like labels, buttons, textfields are added to create a GUI.
+
+Button 1, is the file chooser button that user should be able to click and the file chooser window should appears on the screen so that they can choose thier files from thier own PC. this is implemented nby using the JButton class.It is used to create a labeled button that has platform independent implementation. 
+
+I add the file chooser function inside the action performed 
+i used an object to pass on the file chooser class.
+and i determined the path of the file chooser so user would have the ability to choose the file from.
+
+A message should be displayed on the screen informing the user that the file is opened and i used the JOptionPane.showMessageDialog function to do that.
+
+
+control class 
+this is where all the testing happens.
+THe static void function contain 2 objects inside it 
+one for the GUI to pass on the GUI class and other one is for the Filehandler class
 
