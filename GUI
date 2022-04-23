@@ -1,0 +1,89 @@
+/*Description : This is a Java Program that shows if a set
+of documents are about the same topic or not. the program 
+will scan the words of the documents and check if there
+are common words between the documents which should then 
+declare that these documents are similar.stop words 
+for example like the , a , of , he etc should be excluded 
+from the analysis.
+Author: Ethar Boudouara
+Date : 21 March 2022*/
+
+
+package AS2;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.Spring;
+
+public class GUI extends JFrame implements ActionListener
+
+{
+	// attributes
+		JButton button1;
+		JPanel panel;
+		
+
+		GUI (String title)
+		{
+	
+			super(title);
+			setSize(300,300);
+			setLayout(new FlowLayout()); // sets the layout to a flowlayout
+		
+			button1 = new JButton("Choose a file");
+			button1.setToolTipText("choose a two text file to check the similiraty between them");
+			button1.addActionListener(this); // I want to "listen" to the button
+	
+	
+			panel = new JPanel(new FlowLayout());
+	        panel.setBackground(Color.black);
+	        
+	        panel.add(button1);
+	        add(panel);
+		   	
+			setVisible(true);
+		
+		}
+		
+		
+		
+		public void actionPerformed(ActionEvent e)
+		{
+
+				JButton open = new JButton();
+				JFileChooser fc = new JFileChooser();
+				fc.setCurrentDirectory(new java.io.File("C:/User/ethar/Documents"));
+				fc.setDialogTitle("File Chooser");
+				//fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+				fc.setMultiSelectionEnabled(true);
+				fc.showOpenDialog(open);
+				File[] files = fc.getSelectedFiles();
+				if(fc.showOpenDialog(open) == JFileChooser.APPROVE_OPTION)
+				{
+			
+				}
+				// displays the choosen file from the file chooser
+				System.out.println("you choose: "+fc.getSelectedFile().getAbsolutePath());
+
+			// displays message "file is opened
+				JOptionPane.showMessageDialog(this, "File is opened");
+				System.out.println("button was clicked");
+			
+		}
+
+
+
+
+	
+	
+	
+}
