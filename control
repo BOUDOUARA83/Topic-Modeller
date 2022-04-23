@@ -1,0 +1,20 @@
+package AS2;
+
+import java.io.IOException;
+import java.util.logging.FileHandler;
+
+public class Control {
+	
+	public static void main(String[] args) throws SecurityException, IOException 
+	{
+		//he GUI to pass on the GUI class and other one is for the Filehandler class
+		
+      GUI myScreen = new GUI("file chooser");
+      fileHandler myScreen2 = new fileHandler();
+      
+	}
+
+
+}
+
+
