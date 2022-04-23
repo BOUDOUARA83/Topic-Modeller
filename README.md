@@ -7,13 +7,12 @@ Description : This is a Java Program that shows if a set of documents are about 
 the program will scan the words of the documents and check ifthere are common words between the documents which should then 
 declare that these documents are similar.stop words for example like the , a , of , he etc should be excluded from the analysis.
 
-the program should open the two files first, then it should scan and read the files line by line. A catch function that allows to define a block of code to be executed, if an error occurs in the try block sould be created when reaing the files and then it should return the lines.when all of that is done the program should compare the two files.
-
+the program should read the files line by line which i did by using an array and then it should print out weihter both files are identical or not.
 
 GUI Class
 A graphic user interface is built in the GUI class. 
 There should a button that user can click on to get to choose thier files from the file chooser window.
-this is done by creating the file chooser functyion in the file chooser class i have created then i linked it the GUI in the control class.
+this is done by creating the file chooser function in the file chooser class i have created then i linked it the GUI in the control class.
 
 the Gui class extends from the JFrame function which which inherits the java.awt.Frame class. JFrame works like the main window where components like labels, buttons, textfields are added to create a GUI.
 
