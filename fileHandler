@@ -1,99 +1,48 @@
-package assignment2;
+package AS2;
 
 import java.io.File;
+
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.BufferedReader;
 
-public class fileHandler {
-	
-	String fileName;
-	File MyFile;
-	Scanner myScanner;
-    PrintWriter pwInput;
-    
-    
- // Constructor
- 	fileHandler (String fileName)
- 	{
- 		
- 		this.fileName = fileName;
- 		
- 	}
- 	
- // get a connection to the file
- 	void connectToFile()
- 	{
- 		MyFile = new File(fileName);
- 	}
- 	
- 	
- 	public void openFile()
- 	{
- 		File MyFile  =new File(fileName);
- 	}
+import java.util.*;
 
- 	
- 	
- 	//this is a method to read the words of the first file
- 	public String readWord()
- 	{
- 		return fileName;
- 			
- 	}
- 	
- 	//A method to read the lines of the two files 
- 	public String readlines()
- 	{
- 		
- 		
- 		HashSet<String> content = new HashSet<String>();
- 		String Line = "";
- 		try
- 			{
- 			 // a function to scan file and prints it 
- 			Scanner MySCanner = new Scanner(MyFile);
- 			while (MySCanner.hasNextLine())
- 			{
- 				Line = MySCanner.nextLine();
- 				System.out.println("the line is " + Line);
- 			}
- 				myScanner.close();
- 			
- 			} 
- 		    //error checker 
- 			catch (FileNotFoundException e)
-			{
- 				e.printStackTrace();
- 				System.out.println("error caught" +e.getMessage());
- 			}
- 			
- 		 	finally
- 		 	{
- 		 		return Line;
- 		 	}
- 		
- 	}
- 			// get hold of a Print writer object
- 			void getFileWriter()
- 			{
- 				try
- 				{
- 					pwInput = new PrintWriter(MyFile);
- 				}
- 				catch (FileNotFoundException e)
- 				{
- 					System.out.println("run time error " + e.getMessage());
- 				}
-    	
- 			}	
+import javax.swing.JFileChooser;
 
- 			// write a string to the file
- 			void writeLineToFile(String line)
- 			{
- 				System.out.println(line);
- 				pwInput.println(line);
- 				pwInput.close();
- 			}	
+import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
+import java.io.*;
+
+public class fileHandler 
+{
+	public List<String> readFile()
+	{
+		
+		Object files;
+		for(int i=0; i<files.length-1; i++) {
+		    for(int j=i+1; j<files.length; j++) {
+		        byte[] f1 = Files.readAllBytes(files[i]);
+		        byte[] f2 = Files.readAllBytes(files[j]);
+
+		        String i1;
+				if (Arrays.equals(f1, f2))
+		            System.out.println("file #" + i1 + " and file #" + j + " are identical.");
+		        else
+		            System.out.println("file #" + i1 + " and file #" + j + " are different.");
+		    }
+		}
 	}
+
+	/*public static List<String> readFileInList(String fileName)
+	  {
+		
+		return null;
+		               
+	 }*/
+	
+}
+	  
+		
+
