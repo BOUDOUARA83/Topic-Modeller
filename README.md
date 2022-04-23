@@ -38,3 +38,6 @@ this is where all the testing happens.
 THe static void function contain 2 objects inside it 
 one for the GUI to pass on the GUI class and other one is for the Filehandler class
 
+
+File Handler Class
+it should be able to read both files line by line and this is done by using an array and then prints out wiether they are idntical or not
